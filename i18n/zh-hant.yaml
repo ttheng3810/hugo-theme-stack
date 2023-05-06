@@ -37,6 +37,10 @@ widget:
     tagCloud:
         title:
             other: 標籤雲
+    
+    categoriesCloud:
+        title:
+            other: 分類
 
 search:
     title:
