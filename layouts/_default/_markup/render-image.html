@@ -1,3 +1,5 @@
+<!-- https://gohugo.io/content-management/multilingual/#page-bundles -->
+<!-- https://discourse.gohugo.io/t/add-link-to-figure-caption/38740 -->
 {{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
 {{- $Permalink := .Destination | relURL | safeURL -}}
 {{- $alt := .PlainText | safeHTML -}}
@@ -31,7 +33,7 @@
 	{{ with $Srcset }}srcset="{{ . }}"{{ end }}
 	loading="lazy"
 	{{ with $alt }}
-		alt="{{ . }}"
+		alt="{{ . | markdownify }}"
 	{{ end }}
 	{{ if $galleryImage }}
 		class="gallery-image" 
