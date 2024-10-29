@@ -12,13 +12,13 @@
     <div class="article-title-wrapper">
         <h2 class="article-title">
             <a href="{{ .RelPermalink }}">
-                {{- .Title -}}
+                {{- .Title | markdownify -}}
             </a>
         </h2>
     
         {{ with .Params.description }}
         <h3 class="article-subtitle">
-            {{ . }}
+            {{ . | markdownify }}
         </h3>
         {{ end }}
     </div>
